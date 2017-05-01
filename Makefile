@@ -15,7 +15,7 @@ OBJECT_FILES	= $(addprefix build/, $(addsuffix .o, $(LIBFTFILES))) $(addprefix b
 
 NAME			= libftprintf.a
 
-CC				= gcc
+CC				= gcc -03
 
 CFLAGS			= -c -Wall -Werror -Wextra
 
