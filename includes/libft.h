@@ -42,26 +42,26 @@ typedef struct	s_flags
 
 int				ft_printf(const char *format, ...);
 
-void			fn14(char **pos, va_list *args, t_flags *data);
-void			fn15(char **pos, t_flags *data);
-void			fn16(char **pos, va_list *args, t_flags *data);
-void			fn17(char **pos, va_list *args, t_flags *data);
-void			fn18(char **pos, t_flags *data);
+void			parse_arguments(char **pos, va_list *args, t_flags *data);
+void			parse_flags(char **pos, t_flags *data);
+void			parse_width(char **pos, va_list *args, t_flags *data);
+void			parse_precision(char **pos, va_list *args, t_flags *data);
+void			parse_length(char **pos, t_flags *data);
 
-void			fn21(char **str, char c, int len, char is_prep);
-void			fn22(char **target, char *dst, char *src);
-char			*fn2(wchar_t c);
-char			*fn6(va_list *args, t_flags *data, int base);
-char			*fn7(va_list *args, t_flags *data, int base);
+void			join_repeating_char(char **str, char c, int len, char is_prep);
+void			join_str_target(char **target, char *dst, char *src);
+char			*unicode_to_utf8(wchar_t c);
+char			*get_signed_int(va_list *args, t_flags *data, int base);
+char			*get_unsigned_int(va_list *args, t_flags *data, int base);
 
-int				fn10(char *str, t_flags *data, int fmt);
-int				fn9(char *str, t_flags *data);
-int				fn8(char *str, t_flags *data);
+int				convert_hexa(char *str, t_flags *data, int fmt);
+int				convert_octa(char *str, t_flags *data);
+int				convert_int(char *str, t_flags *data);
 
-int				fn13(va_list *args, t_flags *data);
-int				fn4(va_list *args, t_flags *data);
-int				fn5(t_flags *data);
-void			fn19(char **str);
+int				print_string(va_list *args, t_flags *data);
+int				print_char(va_list *args, t_flags *data);
+int				print_invalid_converter(t_flags *data);
+void			clear_string(char **str);
 
 typedef struct	s_l
 {

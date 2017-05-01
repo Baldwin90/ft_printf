@@ -8,7 +8,7 @@ LIBFTFILES		= ft_sqrt ft_ceil ft_memalloc ft_strcontains ft_strclen ft_strndup f
 					ft_putchar_fd ft_putstr_fd ft_putendl_fd ft_putnbr_fd ft_lstadd ft_lstdel ft_lstdelone \
 					ft_lstiter ft_lstmap ft_lstnew ft_memjoin ft_llutoa_base ft_strupcase
 
-PRINTFFILES		= ft_printf
+PRINTFFILES		= string_utils ft_printf parse_conversion convert_char convert_hexa_octa_int convert_string 
 
 DOTCFILES		= $(addprefix srcs/libft/, $(addsuffix .c, $(LIBFTFILES))) $(addprefix srcs/printf/, $(addsuffix .c, $(PRINTFFILES)))
 OBJECT_FILES	= $(addprefix build/, $(addsuffix .o, $(LIBFTFILES))) $(addprefix build/, $(addsuffix .o, $(PRINTFFILES)))
